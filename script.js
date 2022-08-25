@@ -1,33 +1,43 @@
-const div = document.querySelector('div')
-const body = document.querySelector('body')
-// body.append(memeForm)
-const meme = document.querySelector('#meme')
-const memeForm = document.querySelector('memeForm')
-const section = document.querySelector('section')
+const form = document.querySelector('#create-meme');
+const imgInput = document.querySelector('#img');
+const topInput = document.querySelector('#text-top');
+const btmInput = document.querySelector('#text-bottom');
+const btmSection = document.querySelector('#btm-section');
+const button = document.querySelector('#submit-form');
+const div = document.querySelector('#add-meme');
 
-div.addEventListener('submit', function(evt) {
-    evt.preventDefault();
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    debugger;
+    console.log(imgInput.value);
+    console.log(topInput.value);
+    console.log(btmInput.value);
 
-    const removeButton = document.createElement("button")
-    removeButton.innerText = "Delete"
+    const newImage = document.createElement('img');
+    newImage.classList.add('thumbnail');
+    newImage.setAttribute('src', imgInput.value);
+    imgInput.value = '';
 
-    const newTextTop = document.createElement('h3')
-    const image = document.createElement('img')
-    const newTextBottom = document.createElement('h3')
-    newTextTop.textContent = document.getElementById('top').value
-    image.setAttribute('src', 'https://images.unsplash.com/photo-1561131989-b8112bafbd43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWVtZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60')
-    newTextBottom.textContent = document.getElementById('bottom').value
+    const topText = document.createElement('div');
+    topText.classList.add('upperText');
+    topText.innerText = topInput.value;
+    topInput.value = '';
 
-    section.append(newTextTop)
-    section.append(image)
-    section.append(newTextBottom)
+    const btmText = document.createElement('div');
+    btmText.classList.add('lowerText');
+    btmText.innerText = btmInput.value;
+    btmInput.value = '';
 
-});
-
-section.addEventListener('submit', function(e) {  // submitBtn instead of "section"
-    const textTop = document.querySelector('top')
-    const url = document.querySelector('pic')
-    const textBottom = document.querySelector('bottom')
+    const rmBtn = document.createElement('button');
+    rmBtn.classList.add('meme-btn');
+    rmBtn.innerText = 'delete';
+    
+//     I want to append these to the new image
+    div.append(newImage);
+    div.append(topText);
+    div.append(btmText);
+    div.append(rmBtn);
+    
 
 })
 
