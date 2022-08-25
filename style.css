@@ -1,27 +1,58 @@
-body {
-    background-color: teal;
-}
-
 h1 {
     text-align: center;
 }
 
-h2 {
-    color:rgb(81, 255, 0);
+h4 {
     text-align: center;
 }
 
-#memeForm {
-    border: 2px solid rgb(115, 0, 255);
-    text-align: center;
-    width: 332px;
-    margin: 0 auto;
-    padding: 20px;
+.text-field {
+    margin: auto;
+    display: block;
+    width: 70%;
 }
 
-label {
-    margin-bottom: 6px;
-    width: 250px;
-    display: inline-block;
-    padding-bottom: 10px;
+#submit-form {
+    margin: auto;
+    display: block;
+}
+
+#top-section {
+    background-color: rgb(214, 208, 178);
+    padding: 5px 0 20px 20px;
+}
+
+/* #add-meme {
+    width: 45%;
+    height: 800px;
+    position: relative;
+} */
+
+.upperText {
+    color: white;
+    position: absolute;
+    top:70px;
+    left:260px;
+    font-family: Impact;
+    font-size: 20PX;         
+}
+.lowerText {
+    color: white;
+    position: absolute;
+    top: 400px;
+    left: 245px;
+    font-family: Impact;
+    font-size: 40PX;         
+}
+
+.meme-btn {
+    position: absolute;
+    top: 530px;
+    left:600px;
+}
+
+.thumbnail {
+    /* width: 45%; */
+    height: 400px;
+    position: relative;
 }
