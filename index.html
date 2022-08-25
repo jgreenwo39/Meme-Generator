@@ -4,47 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app.css">
-    <title>Meme Generator</title>
+    <link href="style.css" rel="stylesheet">
+    <!-- <script src="myGenerator.js"></script> -->
+    <title>Assessment 1: Meme Generator</title>
 </head>
 <body>
-    <h1>Assessment 1: Meme Generator</h1>
-<br>
-    <h2>Create a meme:</h2>
-
-    <div id="memeForm">
-        <form action="">
-            <div id="textTop">
-                <label>Text above meme
-                    <input type="text" name="aboveText" id="top" placeholder="text" required>
-                </label>
-            </div>
-                
+    <h3>addEventListener</h3>
+    <!-- <button id="violet">Change to violet</button> -->
+    <section id="top-section">
+        <h1>MEME GENERATOR</h1>
+        <h4>Want to create a meme? Fill in form below.</h4>
+        <form action="" id="create-meme">
+            <label for="img">image url:</label>
+                <input type="text" id="img" class="text-field" placeholder="http://www.example.com">
             <p></p>
-
-            <div id="url">
-                <label>Enter image url:
-                    <input type="url" name="url" id="pic" placeholder="https://example.com" required>
-                </label>
-            </div>
-                
+            <label for="text-top">text above:</label>
+                <input type="text" name="text_top" class="text-field" placeholder="text above meme">
             <p></p>
-
-            <div id="textBottom">
-                <label>Text below meme
-                    <input type="text" name="belowText" id="bottom" placeholder="text" required>
-                </label>
-            </div> 
-            
+            <label for="text-bottom">text below:</label>
+                <input type="text" id="text_bottom" class="text-field" placeholder="text below meme">
             <p></p>
-            
-            <input type="submit">
+            <input type="submit" id="submit_form" class='submit' value="Create Meme">
         </form>
-    </div>
-
-    <section>
-        
     </section>
-    <script src="app.js"></script>    
+    <p></p>
+    <section id="btm-section"> 
+        <div id="add-meme" class="thumbnail"></div>
+    </section>
+    
+    <script src="app.js"></script>
 </body>
 </html>
